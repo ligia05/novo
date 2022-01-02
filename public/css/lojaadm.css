@@ -1,0 +1,82 @@
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Pompiere', cursive;
+    }
+
+.master{
+  display: grid;
+    grid-template-areas:
+    'A U U U U'
+    'A G G K C'
+    'F L J N C'
+    'M B B N X'
+    'E E E E E';
+    grid-gap: 0px;
+   
+    background-color: white;
+}
+.colEsquerda > div{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.box1{
+grid-area: A;
+font-family: 'Pompiere', cursive;
+font-size: 30px;
+margin-left: 30px;
+margin-top: 20px;
+
+
+}
+img.estrela{
+  width: 100px;
+  margin-left: 30px;
+}
+
+.box2{
+  grid-area:C ;
+  font-family: 'Pompiere', cursive;
+  background-size: cover;
+  background-position: center;
+font-size: 30px;
+  margin-right: 30px;
+}
+.tab{
+  grid-area: B;
+margin-bottom: 50px;
+}
+.container{
+  font-family: 'Pompiere', cursive;
+  font-size: 40px;
+grid-area: L;
+margin-left: 20px;
+margin-top: 30px;
+
+}
+.nada{
+  grid-area: G;
+  background-image: url('/css/img/vazio.png');
+  background-size: cover;
+  background-position: center;
+
+}
+.set{
+grid-area:B;
+
+margin-left: 250px;
+margin-top: 100px;
+
+}
+.position{
+  grid-area: B;
+  margin-top: 30px;
+margin-left: 270px;
+}
+.vazio{
+  grid-area: E;
+  background-image: url('/css/img/vazio.png');
+  background-size: cover;
+background-position: center;
+}

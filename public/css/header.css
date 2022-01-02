@@ -1,0 +1,115 @@
+#nav-adm{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(94,164,65);
+   background: linear-gradient(337deg, rgba(94,164,65,1) 2%, rgba(84,149,85,1) 47%, rgba(36,221,97,1) 100%);
+    color: #FFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#nav-adm div.log{
+    margin-right: 120px;
+}
+#nav-adm div.texto{
+    margin-right: 100px;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+
+#nav-adm ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#nav-adm ul li {
+    display: block;
+}
+
+#nav-adm ul li a{
+    display: flex;
+    padding: 20px;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+header{
+    max-width: 100%;
+   flex-wrap: wrap;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background: rgb(94,164,65);
+   background: linear-gradient(337deg, rgba(94,164,65,1) 2%, rgba(84,149,85,1) 47%, rgba(36,221,97,1) 100%);
+   color:aliceblue;
+   font-family: 'Pompiere', cursive;
+   box-shadow: 1px 2px 8px  rgba(39, 41, 41, 0.74);
+   }
+   
+
+   
+   
+   
+   .local{
+     display: flex;
+     flex-wrap: wrap;
+    font-size: 20px;
+     flex-direction: column;
+     margin-right: 100px;
+    
+   
+   }
+   
+   .pin{
+     display: flex;
+   padding-left: 100px;
+   
+   }
+   
+   .perfil{
+     display: flex;
+    flex-wrap: nowrap;
+     width: 80px;
+    height: 80px;
+    margin-right: 40px
+   }
+   .menu{
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     margin-right: 20px;
+   }
+   .boton{
+       width: 50px;
+         border-radius: 20px 40px 60px 80px;
+         background-color: rgba(95, 164, 65, 0.719);
+         font-family:'Pompiere', cursive; 
+        font-size: 15px;
+        box-shadow:0 1px 3px rgba(124, 124, 134, 0.856);
+        }
+        .estados{
+          width: 120px;
+          border-radius: 20px 40px 60px 80px;
+          box-shadow:1px 3px 3px rgba(124, 124, 134, 0.856);
+        background-color: rgba(212, 243, 198, 0.568);
+        }
+        .header2{
+            max-width: 100%;
+           flex-wrap: wrap;
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           background: rgb(94,164,65);
+           background: linear-gradient(337deg, rgba(94,164,65,1) 2%, rgba(84,149,85,1) 47%, rgba(36,221,97,1) 100%);
+           color:aliceblue;
+           font-family: 'Pompiere', cursive;
+           box-shadow: 1px 2px 8px  rgba(39, 41, 41, 0.74);
+           }

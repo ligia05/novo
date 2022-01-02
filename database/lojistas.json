@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "nome":"luis",
+        "produto":"comida"
+    },
+    {
+        "id":2,
+        "nome":"sonia",
+        "produto":"comida"
+    },
+    {
+        "id":3,
+        "nome":"pedro",
+        "produto":"petshop"
+    },
+    {
+        "id":4,
+        "nome":"ana",
+        "produto":"artesanato"
+    },
+    {
+        "id":5,
+        "nome":"luli",
+        "produto":"doces"
+    },
+    {
+        "id":6,
+        "nome":"tati",
+        "produto":"servicos"
+    }
+]

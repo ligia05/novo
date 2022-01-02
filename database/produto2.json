@@ -1,0 +1,25 @@
+[
+    {"id":2,"nome":"GeleiaMorango","ingredientes":["morango", "açucar"],"preco":9.5,"img":"/img/mv1.png"},
+    
+    {"id":3,"nome":"GeleiaUva","ingredientes":["uva","açucar"],"preco":8.65,"img":"/img/mv2.png"},
+        
+    {"id":4,"nome":"Bolinho de Polenta","ingredientes":["mussarela","polenta","linguiça"],"preco":13.5,"img":"/img/mv3.png"},
+        
+    {"id":5,"nome":"Vinho de Jabuticaba","ingredientes":["jabuticaba"],"preco":30.5,"img":"/img/mv4.png"},
+        
+    {"id":6,"nome":"Conserva de Berinjela","ingredientes":["cebola","pimentão","berinjela","azeite"],"preco":20.5,"img":"/img/mv5.png"},
+        
+    {"id":8,"nome":"Socol","ingredientes":["lombo de porco defumado"],"preco":38.5,"img":"/img/mv6.png"},
+        
+    {"id":9,"nome":"Geleia de Pimenta","ingredientes":["pimenta dedo-de-moça","pimenta de cheiro","açucar"],"preco":15.5,"img":"/img/mv6.png"},
+    
+    {"id":10,"nome":"massa caseira","ingredientes":["farinha de trigo","ovos"],"preco":20.5,"img":"/img/mv7.png"},
+        
+    {"id":11,"nome":"Queijo Meia Cura","ingredientes":["leite","fermento lático","sal"],"preco":28.5,"img":"/img/mv8.png"},
+        
+    {"id":12,"nome":"Molho Pesto","ingredientes":["azeite", "Manjericão"],"preco":8.5,"img":"/img/mv9.png"}
+    ]
+    
+    
+    
+    
