@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<main>
+		<h1><%= produtos.nome %></h1>
+		<h2><%= produtos.produto.toLocaleString('pt-br', { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' })
+			%></h2>
+		<img src="<%= produto.img %>" alt="">
+		<div>Serviços: <%= produtos.produto %></div>
+		<button>+ Add</button>
+		<% if(idPrev != undefined) { %>
+			<a href="/buscalojista/<%= idPrev %>" class="prev">&lt;</a>
+			<% } %>
+
+		<% if(idNext != undefined) { %>
+		<a href="/buscalojista/<%= idNext %>" class="next">&gt;</a>
+		<% } %>
+
+	</main>
+</body>
+</html>

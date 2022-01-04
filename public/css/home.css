@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  .tela{
+    width: 300px;
+  }
+
+    img.banner{
+    display: flex;
+margin-top: 150px;
+box-shadow:2px 1px 10px rgba(14, 20, 16, 0.856);
+  }
+
+  
+.caixa{
+  
+  margin-left: 220px;
+  margin-top: 90px;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+   
+  }
+ .comida{
+  width: 200px;
+  height: 200px;
+    box-shadow:0 1px 10px rgba(15, 14, 20, 0.856);
+   margin-left: 20px;
+  margin-right: 20px;
+  }
+.roupa{
+    width: 200px;
+    height: 200px;
+    box-shadow:0 1px 10px rgba(15, 14, 20, 0.856);
+  }
+.doce{
+    width: 200px;
+    height: 200px;
+    box-shadow:0 1px 10px rgba(15, 14, 20, 0.856);
+  }
+.selecionados{
+  display: flex;
+    margin-bottom: -50px;
+  flex-wrap: wrap;
+    font-family:'Pompiere', cursive; 
+  
+  margin-left: 300px;
+  margin-top: 120px;
+  }
+  .titulos{
+   block-size:border-box;
+    margin-left: 300px;
+   margin-right: 300px;
+   margin-top: 150px;
+  }
+ .textroupa{
+    font-family:'Pompiere', cursive; 
+    font-size: 30px;
+  
+   
+  
+  }
+  .textcomida{
+  
+    font-family:'Pompiere', cursive; 
+    font-size: 30px;
+  margin-left: 110px;
+  }
+  
+ .textdoce{
+    font-family:'Pompiere', cursive; 
+    font-size: 30px;
+   margin-left: 160px;
+   
+   
+  }
+  div.sebrae{
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  margin-bottom: 10px;
+  align-items:flex-end;
+  }
+  .selo{
+  width:100px;
+  height: 80px;
+  }
+   
+ .logSeb{
+    width: 120px;
+    height: 100px;
+  
+  
+  }
+  
+   img.gif{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+  margin-left: 450px;
+  box-shadow:0 1px 10px rgba(15, 14, 20, 0.856);
+   
+  }
+  

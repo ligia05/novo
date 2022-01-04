@@ -2,31 +2,44 @@
     {
         "id":1,
         "nome":"luis",
-        "produto":"comida"
+        "produto":"comida",
+        "img": "/img/comida1.jpg"
     },
     {
         "id":2,
         "nome":"sonia",
-        "produto":"comida"
+        "produto":"comida",
+        "img": "/img/comida2.jpg"
     },
     {
         "id":3,
         "nome":"pedro",
-        "produto":"petshop"
+        "produto":"petshop",
+        "img": "/img/pet3.jpg"
     },
     {
         "id":4,
         "nome":"ana",
-        "produto":"artesanato"
+        "produto":"artesanato",
+        "img": "/img/artesanato4.jpg"
     },
     {
         "id":5,
         "nome":"luli",
-        "produto":"doces"
+        "produto":"doces",
+        "img": "/img/doces5.jpg"
     },
     {
         "id":6,
         "nome":"tati",
-        "produto":"servicos"
+        "produto":"servicos",
+        "img": "/img/servico.jpg"
+    },
+
+    {
+        "id":7,
+        "nome":"Baiana",
+        "produto":"comida",
+        "img": "/img/comida7.jpg"
     }
 ]

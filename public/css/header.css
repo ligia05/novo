@@ -1,44 +1,52 @@
 #nav-adm{
-    display: flex;
-    justify-content: space-between;
-    background: rgb(94,164,65);
-   background: linear-gradient(337deg, rgba(94,164,65,1) 2%, rgba(84,149,85,1) 47%, rgba(36,221,97,1) 100%);
-    color: #FFF;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  font-family:'Pompiere', cursive;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(94,164,65);
+  background: linear-gradient(337deg, rgba(94,164,65,1) 2%, rgba(84,149,85,1) 47%, rgba(36,221,97,1) 100%);
+  color: #FFF;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
 }
-#nav-adm div.log{
-    margin-right: 120px;
-}
-#nav-adm div.texto{
-    margin-right: 100px;
-    font-size: 40px;
-    padding-top: 20px;
+#nav-adm div{
+  padding: 10px;
+  font-size: 2rem;
 }
 
 
 #nav-adm ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 #nav-adm ul li {
-    display: block;
+  display: block;
 }
 
 #nav-adm ul li a{
-    display: flex;
-    padding: 20px;
-    font-size: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: white;
+  display: flex;
+  padding: 20px;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
+#nav-adm ul li.selected a{
+ 
+  color: #FFF;
+}
+
+#nav-adm ul li a:hover{
+ 
+  text-decoration: none;
+  color: #E0E0E0;
 }
 
 header{
@@ -54,8 +62,11 @@ header{
    box-shadow: 1px 2px 8px  rgba(39, 41, 41, 0.74);
    }
    
-
-   
+   h1{
+     display: flex;
+    
+     align-self: center;
+   }
    
    
    .local{
@@ -81,7 +92,7 @@ header{
     height: 80px;
     margin-right: 40px
    }
-   .menu{
+   .menuu{
      display: flex;
      flex-wrap: wrap;
      flex-direction: row;
@@ -101,15 +112,4 @@ header{
           box-shadow:1px 3px 3px rgba(124, 124, 134, 0.856);
         background-color: rgba(212, 243, 198, 0.568);
         }
-        .header2{
-            max-width: 100%;
-           flex-wrap: wrap;
-           display: flex;
-           justify-content: space-around;
-           align-items: center;
-           background: rgb(94,164,65);
-           background: linear-gradient(337deg, rgba(94,164,65,1) 2%, rgba(84,149,85,1) 47%, rgba(36,221,97,1) 100%);
-           color:aliceblue;
-           font-family: 'Pompiere', cursive;
-           box-shadow: 1px 2px 8px  rgba(39, 41, 41, 0.74);
-           }
+       

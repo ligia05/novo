@@ -2,10 +2,36 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+  <body class="container">
+  
+    <% if (ehUsuario) { %>
+      <%- include('./parts/headerlogado') %>
+    <% } else { %>
+    
+      <%- include('./parts/headerdeslogado') %>
+    <% } %>
+
+    <link rel="stylesheet" href="/css/home.css">
+    <img class="banner" src="/img/banner2.gif" alt="bn">
+    <div class="selecionados">
+    <h1>SELECIONADOS DAS CATEGORIAS EM DESTAQUE</h1>
+</div>
+<div class="titulos" >
+<span class="textroupa" >Confecções</span>
+<span class="textcomida" >Comidas</span>
+<span class="textdoce" >Doces</span>
+</div>
+<div class="caixa">
+
+     <img class="roupa" src="/img/roupa.gif" alt="rou"><img class="comida" src= "/img/comida.gif" alt="com">
+     <img class="doce" src= "/img/doce.gif" alt="doc">
+       </div>
+       <img class="gif" src="/img/tela.gif" alt="gif">
+<div class="sebrae">
+<img class="selo" src="/img/selo.png " alt="cor">
+<img class="logSeb" src="/img/sebrae_mt.png" alt="lg">
+</div>
+
+  <%- include('./parts/footer') %>
