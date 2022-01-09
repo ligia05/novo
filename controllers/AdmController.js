@@ -1,32 +1,28 @@
-const req = require('express/lib/request');
+const session = require('express-session');
 
-module.exports = {
-
+const controller = {
     showLogin: (req, res) => {
-        return res.render('userlogin');
+        res.render('userlogin');
     },
     login: (req, res) => {
+        const usuarios = require('../database/usuarios.json');
+        const {email, senha} = req.body;
 
+        const usuario = usuarios.find( u => u.email == email && u.senha == senha);
 
-        const { email, senha } = req.body;
-        const usuarios = require('../database/usuarios.json')
-
-        // Carregar o array de usuários (database/Usuarios.json)
-
-
-        // Buscar o usuário no array pelo email digitado
-        const usuario = usuarios.find(u => u.email == email && u.senha == senha);
-        // Caso usuário não exista, retornar erro (fim)
-        if (usuario === undefined) {
-            return res.send("Senha ou email inválidos");
+        if(usuario === undefined){
+            return res.send('Senha ou email inválidos');
         }
-        req.session.usuario = usuario;
-        return res.redirect("/adm/usercreate");
 
+        req.session.usuario = usuario;
+        res.redirect('/');
     },
     logout: (req, res) => {
-        req.session.usuario = undefined;
+        if(req.session.usuario !== undefined){
+            req.session.usuario = undefined;
+        }
         res.redirect('/adm/userlogin');
     }
-
 }
+
+module.exports = controller;

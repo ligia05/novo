@@ -1,13 +1,13 @@
-const lojinhas = require('../database/Pizzas.json');
+const lojinhas = require('../database/produto2.json');
 
-
+const fs = require('fs');
 
 
 const controller = {
 
 
     listar: (req, res)=> {
-        return res.render('loja',{lojinhas, busca:""});
+        return res.render('lojaInt',{lojinhas, busca:""});
         // res.send(lojinha)
     },
 
@@ -15,19 +15,17 @@ const controller = {
 
         // Capturar o id requisitado (req.params)
         const idLojinha = req.params.id;
-        let idPrev = null;
-        let idNext = null;
-
+      
+        let idPrev, idNext = undefined;
         // Capturar do array a pizza com o id requisitado (lojinha.find)
-        const produto = lojinhas.find(
-            (p, i) => {
-                idPrev = lojinhas[i-1]==undefined?undefined:lojinhas[i-1].id;
-                idNext = lojinhas[i+1]==undefined?undefined:lojinhas[i+1].id;
-                return p.id == idLojinha
+        const produto = lojinhas.find((p, i) => {
+            idPrev =  lojinhas[i-1] != undefined ? lojinhas[i-1].id : undefined;
+            idNext =  lojinhas[i+1] != undefined ? lojinhas[i+1].id : undefined;
+            return p.id == idLojinha
             });
 
         // Retornar a pizza encontrada para o cliente (res.send())
-        res.render('loja',{produto, idNext, idPrev});
+        res.render('produto',{produto, idNext, idPrev});
 
     },
 
@@ -44,7 +42,7 @@ const controller = {
 
         // Renderizar a view index passando para ela
         // as lojinha filtradas
-        res.render('loja', {lojinhas:lojinhaFiltras, busca:lojastring});
+        res.render('produtos', {lojinhas:lojinhaFiltras, busca:lojastring});
     },
 
 }

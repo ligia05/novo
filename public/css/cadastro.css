@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pompiere', cursive;
+    font-size: 16px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(337deg, rgb(94, 164, 65) 2%, rgb(84, 149, 85) 47%, rgba(36, 221, 97, 1) 100%);
+    font-family: 'Pompiere', cursive;
+    height: 150px;
+
+}
+
+
+.bspor{
+    color: seashell;
+  
+}
+
+
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+}
+
+.loc-container {
+    width: 80px;
+    margin-right: 100px;
+}
+
+.link-loc {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #f0f5fb;
+    width: 200px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.link-loc img {
+    float: left;
+}
+
+
+.login-cadastro {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-right: 100px;
+  
+}
+
+.menuu {
+    width: 70px;
+    height: 70px;
+}
+#menu ul {
+	padding:0px;
+	margin:0px;
+	background-color:#EDEDED;
+	list-style:none;
+}
+#menu ul li { display: inline; }
+
+/* MAIN */
+
+h3 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    max-width: 680px;
+    height: 670px;
+    margin: 50px auto;
+    padding: 20px 0;
+    background: rgb(233, 232, 232);
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px, 1px 1px 5px whitesmoke;
+
+}
+
+.cadastro-container h3 {
+    text-align: center;
+    padding: 30px;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+form > div {
+    margin-bottom: 10px;
+}
+
+.cadastro-container div {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.cadastro-container input {
+    height: 40px;
+    font-size: 1.3rem;
+    padding: 10px;
+    outline: none;
+}
+
+.cadastro-container .div-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.div-checkbox #checkbox {
+    width: 20px;
+    padding: 0;
+}
+
+.cadastro-container .div-checkbox label {
+    padding: 0;
+    margin: 0 0 0 8px;
+}
+
+.cadastro-container div label {
+    margin-top: 5px;
+    /* font-size: 1.5rem; */
+}
+
+.cadastro-container div label::after {
+    content: '*';
+    padding-left: 3px;
+    color: red;
+}
+
+.div-button {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.button-continuar {
+    border: 1px solid #000000;
+    color: black;
+    background-color: #a2fca4;
+    font-size: 1.2rem;
+    border-radius: 5%;
+    width: 130px;
+    height: 30px;
+    padding: 5px;
+    transition: all .3s;
+}
+
+.button-continuar:hover {
+    background: #2ba52d;
+    color: rgb(255, 255, 255);
+    width: 140px;
+    height: 40px;
+}

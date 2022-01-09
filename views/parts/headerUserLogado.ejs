@@ -14,7 +14,36 @@
     <button class="boton">Buscar</button>
   </div>
 
+  <div class="dropdown">
+  
+    <button onclick="myFunction()" class="dropbtn"> <img src="/css/imagens/pequenas/peq_img.png" alt=""> </button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
   <div class="botao">
     <h2>Escolha Seu Estado</h2>
