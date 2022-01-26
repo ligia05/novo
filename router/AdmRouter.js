@@ -9,7 +9,7 @@ const storage = multer.diskStorage(
 const upload = multer({storage});
 
 //Importar o PizzasController
-const LojaController = require('../controllers/LojaControllers')
+const LojaController = require('../controllers/LojaController')
 const AdmController = require('../controllers/AdmController');
 
 const router = express.Router();

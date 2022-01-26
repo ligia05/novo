@@ -1,4 +1,4 @@
-const pizzas = require('../database/produto2.json');
+const produtos = require('../database/produto2.json');
 const fs = require('fs');
 const { validationResult } = require('express-validator');
 
@@ -6,27 +6,27 @@ const { validationResult } = require('express-validator');
 const controller = {
     
     listar: (req, res)=> {
-        return res.render('index',{pizzas, busca:""});
-        // res.send(pizzas)
+        return res.render('index',{produtos, busca:""});
+        // res.send(produtos)
     },
 
-    getPizza: (req, res) => {
+    getProduto: (req, res) => {
 
         // Capturar o id requisitado (req.params)
-        const idPizza = req.params.id;
+        const idProduto = req.params.id;
         let idPrev = null;
         let idNext = null;
 
-        // Capturar do array a pizza com o id requisitado (pizzas.find)
-        const pizza = pizzas.find(
+        // Capturar do array a pizza com o id requisitado (produtos.find)
+        const produto = produtos.find(
             (p, i) => {
-                idPrev = pizzas[i-1]==undefined?undefined:pizzas[i-1].id;
-                idNext = pizzas[i+1]==undefined?undefined:pizzas[i+1].id;
-                return p.id == idPizza
+                idPrev = produtos[i-1]==undefined?undefined:produtos[i-1].id;
+                idNext = produtos[i+1]==undefined?undefined:produtos[i+1].id;
+                return p.id == idProduto
             });
 
-        // Retornar a pizza encontrada para o cliente (res.send())
-        res.render('produtos',{pizza, idNext, idPrev});
+        // Retornar a produto encontrada para o cliente (res.send())
+        res.render('produtos',{produto, idNext, idPrev});
 
     },
 
@@ -35,15 +35,15 @@ const controller = {
         // Capturar a string digitada pelo visitante
         const string = req.query.q.trim();
 
-        // Filtrar do arrays de pizzas somente as pizzas
+        // Filtrar do arrays de produtos somente as produtos
         // que que tiverem a string buscada no nome
-        const pizzasFiltras = pizzas.filter(
+        const produtosFiltras = produtos.filter(
             p => p.nome.toUpperCase().includes(string.toUpperCase())
         );
 
         // Renderizar a view index passando para ela
-        // as pizzas filtradas
-        res.render('produtos', {pizzas:pizzasFiltras, busca:string});
+        // as produtos filtradas
+        res.render('produtos', {produtos:produtosFiltras, busca:string});
     },
 
     create: (req, res) => {
@@ -62,22 +62,22 @@ const controller = {
         const nome = req.body.nome;
         const ingredientes = req.body.ingredientes.split(',').map(a => a.trim());
         const preco = Number(req.body.preco);
-        const pizza = {nome, ingredientes, preco, img:'/img/' + req.file.filename}
+        const produto = {nome, ingredientes, preco, img:'/img/' + req.file.filename}
         
-        // Adicionar o id à pizza recém criada
-        pizza.id = pizzas[pizzas.length - 1].id + 1;
+        // Adicionar o id à produto recém criada
+        produto.id = produtos[produtos.length - 1].id + 1;
 
-        // Adicionar a pizza ao array de pizzas
-        pizzas.push(pizza);
+        // Adicionar a produto ao array de produtos
+        produtos.push(produto);
 
-        // Salvar o json do array de pizzas no arquivo Pizzas.json
+        // Salvar o json do array de produtos no arquivo produtos.json
         fs.writeFileSync(
             __dirname + '/../database/produtos2.json',
-            JSON.stringify(pizzas, null, 4),
+            JSON.stringify(produtos, null, 4),
             {flag:'w'}
         );
         
-        // Direcionar o usuário para a página que exibe a lista de pizzas
+        // Direcionar o usuário para a página que exibe a lista de produtos
         res.redirect('/produtos');
 
     }

@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<% if (Usuario) { %>
+  <%- include('./parts/headerlogado') %>
+<% } else { %>
+
+  <%- include('./parts/headerdeslogado') %>
+<% } %>
 <main>
     <div class="faixa">
         
@@ -30,7 +44,7 @@
 <div class="prod1">
   <img class="emb" src="/img/emb.jpg" alt="eb">
   <br>
-  <button class="mqv"> Massas,Queijos e Vinhos » </button>
+  <button class="mqv"><a href="/views/produtos.ejs"></a> Massas,Queijos e Vinhos » </button>
   <br>
   <span> <p>Conheça aqui nossa linha</p>
     <p>de massas caseiras e queijos,</p>
@@ -40,7 +54,7 @@
 <div class="prod2">
   <img class="emb2" src="/img/outro.jpg" alt="ebm">
   <br>
-  <button class="eg"> Embutidos e Geléias » </button>
+  <button class="eg"><a href="/views/produtos.ejs"></a> Embutidos e Geléias » </button>
   <br>
   <span> <p>Nessa sessão vai conhecer nossa</p>
     <p>linha de embutidos tradicionais,</p>
@@ -63,3 +77,4 @@
 </div>
 <div class="px"> <img src="/img/pix.png" alt=""></div>
 </main>
+<%- include('./parts/footer') %>

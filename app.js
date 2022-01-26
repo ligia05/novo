@@ -8,7 +8,7 @@ const session = require("express-session");
 
 const HomeRouter = require('./router/HomeRouter');
 const AdmRouter = require('./router/AdmRouter');
-
+const LojaRouter = require('./router/LojaRouter');
 const app = express();
 
 // view engine setup
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', HomeRouter);
 app.use('/adm', AdmRouter);
-
+app.use('/lojauser', LojaRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
