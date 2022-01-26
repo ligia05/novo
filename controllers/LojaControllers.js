@@ -1,49 +1,6 @@
-const lojinhas = require('../database/produto2.json');
-
-const fs = require('fs');
-
-
 const controller = {
-
-
-    listar: (req, res)=> {
-        return res.render('lojaInt',{lojinhas, busca:""});
-        // res.send(lojinha)
-    },
-
-    getLojinha: (req, res) => {
-
-        // Capturar o id requisitado (req.params)
-        const idLojinha = req.params.id;
-      
-        let idPrev, idNext = undefined;
-        // Capturar do array a pizza com o id requisitado (lojinha.find)
-        const produto = lojinhas.find((p, i) => {
-            idPrev =  lojinhas[i-1] != undefined ? lojinhas[i-1].id : undefined;
-            idNext =  lojinhas[i+1] != undefined ? lojinhas[i+1].id : undefined;
-            return p.id == idLojinha
-            });
-
-        // Retornar a pizza encontrada para o cliente (res.send())
-        res.render('produto',{produto, idNext, idPrev});
-
-    },
-
-    busca: (req,res) => {
-
-        // Capturar a string digitada pelo visitante
-        const lojastring = req.query.q.trim();
-
-        // Filtrar do arrays de lojinha somente as lojinha
-        // que que tiverem a string buscada no nome
-        const lojinhaFiltras = lojinhas.filter(
-            p => p.nome.toUpperCase().includes(lojastring.toUpperCase())
-        );
-
-        // Renderizar a view index passando para ela
-        // as lojinha filtradas
-        res.render('produtos', {lojinhas:lojinhaFiltras, busca:lojastring});
-    },
-
+    caminho: (req, res) => {
+      res.render('lojaUser');
+    }
 }
-module.exports = controller;
+      module.exports = controller;

@@ -15,8 +15,8 @@ const AdmController = require('../controllers/AdmController');
 const router = express.Router();
 
 
-router.get('/adm/userlogin', AdmController.logout);
-router.get('/adm', AdmController.showLogin);
+//router.get('/userlogin', AdmController.logout);
+router.get('/userlogin', AdmController.showLogin);
 router.post('/', AdmController.login);
 
 // Exportar o roteador 
